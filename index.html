@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Worth | Discover the Hidden Value of E-Waste</title>
+  <meta name="description"
+    content="E-Worth helps users estimate the recoverable value of their electronic waste including gold, silver, copper, and aluminum while promoting sustainable recycling.">
+  <meta name="keywords"
+    content="e-waste calculator, e-waste recycling, recoverable materials, gold recovery, urban mining, sustainable technology">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo" id="navLogo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+          </svg>
+        </div>
+        <div class="logo-text">E-<span>Worth</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#calculator" class="nav-link">Calculator</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#materials" class="nav-link">Materials</a></li>
+          <li><a href="#why-matters" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#calculator" class="btn btn-primary" id="startCalculatingNavBtn">
+          <span>Start Calculating</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Toggle Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#calculator" class="nav-link">Calculator</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#materials" class="nav-link">Materials</a>
+      <a href="#why-matters" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#calculator" class="btn btn-primary" style="margin-top: 0.5rem; text-align: center;">Start
+        Calculating</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            Sustainable Resource Recovery Platform
+          </div>
+          <h1 class="hero-title">
+            Discover the Hidden Value of <span class="highlight">E-Waste</span>
+          </h1>
+          <p class="hero-text">
+            Every discarded electronic device contains valuable materials like gold, silver, copper, and aluminum.
+            E-Worth helps users estimate the recoverable value of their electronic waste while promoting sustainable
+            recycling.
+          </p>
+          <div class="hero-buttons">
+            <a href="#calculator" class="btn btn-primary" id="heroCalcBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2" />
+                <line x1="8" x2="16" y1="6" y2="6" />
+                <line x1="16" x2="16" y1="14" y2="18" />
+                <path d="M16 10h.01" />
+                <path d="M12 10h.01" />
+                <path d="M8 10h.01" />
+                <path d="M12 14h.01" />
+                <path d="M8 14h.01" />
+                <path d="M12 18h.01" />
+                <path d="M8 18h.01" />
+              </svg>
+              <span>Calculate Value</span>
+            </a>
+            <a href="#why-matters" class="btn btn-secondary" id="heroLearnBtn">
+              <span>Learn More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-image-card">
+            <img src="assets/hero-illustration.png" alt="E-Waste Recycling Modern Illustration">
+          </div>
+          <div class="hero-badge-floating">
+            <div class="badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div>
+              <div class="badge-text-title">Eco-Certified Platform</div>
+              <div class="badge-text-sub">Promoting Circular Technology</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">62 <span>M+</span></div>
+          <div class="stat-label">Million Tons of E-Waste Generated Annually</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">22<span>%</span></div>
+          <div class="stat-label">Only 22% Properly Recycled Worldwide</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">₹<span>4.5T+</span></div>
+          <div class="stat-label">Valuable Raw Materials Can Be Recovered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100<span>%</span></div>
+          <div class="stat-label">Educational Estimate Calculator & Breakdown</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Simple Process</div>
+        <h2 class="section-title">How E-Worth Works</h2>
+        <p class="section-subtitle">Discover the metal potential and economic value of your unused or discarded
+          electronics in three clean steps.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number-badge">01</div>
+          <h3 class="step-title">Select Device</h3>
+          <p class="step-desc">Choose your electronic device type from smartphones and laptops to desktops and tablets.
+          </p>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+              <path d="M12 18h.01" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-badge">02</div>
+          <h3 class="step-title">Enter Quantity</h3>
+          <p class="step-desc">Input the number of devices you plan to recycle or estimate to calculate combined yield.
+          </p>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" />
+              <path d="M8 12h8" />
+              <path d="M12 8v8" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-badge">03</div>
+          <h3 class="step-title">View Estimated Worth</h3>
+          <p class="step-desc">Get an instant breakdown of recoverable precious metals, monetary value, and
+            environmental savings.</p>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" x2="12" y1="2" y2="22" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Preview Section -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Interactive Tool</div>
+        <h2 class="section-title">E-Waste Value Calculator</h2>
+        <p class="section-subtitle">Use our educational calculator to estimate the recoverable precious metals inside
+          your discarded electronic devices.</p>
+      </div>
+
+      <div class="calculator-wrapper">
+        <div class="calc-grid">
+          <!-- Inputs Card -->
+          <div class="calc-inputs-card">
+            <div class="form-group">
+              <label class="form-label" for="deviceSelect">
+                <span>Device Type</span>
+                <span style="font-size: 0.8rem; color: var(--muted-text);">Select Category</span>
+              </label>
+              <select id="deviceSelect" class="form-select">
+                <option value="smartphone" selected>Smartphone</option>
+                <option value="laptop">Laptop</option>
+                <option value="desktop">Desktop PC / Tower</option>
+                <option value="tablet">Tablet</option>
+                <option value="monitor">LED Monitor</option>
+                <option value="smartwatch">Smartwatch</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <div class="form-label">
+                <label for="qtyInput">Quantity</label>
+                <div class="qty-badge" id="qtyBadge">10</div>
+              </div>
+              <div class="qty-control">
+                <div class="slider-container">
+                  <input type="range" id="qtyInput" min="1" max="100" value="10" class="form-range">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Device Condition</label>
+              <div class="condition-buttons">
+                <button type="button" class="condition-btn active" data-multiplier="1.0">End-of-Life</button>
+                <button type="button" class="condition-btn" data-multiplier="0.95">Damaged</button>
+                <button type="button" class="condition-btn" data-multiplier="0.85">Used</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Results Card -->
+          <div class="calc-results-card">
+            <div class="results-header">
+              <div class="results-title">Estimated Recovery</div>
+              <div class="eco-badge" id="ecoBadge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+                12.5 kg CO₂ Offset
+              </div>
+            </div>
+
+            <div class="materials-list">
+              <!-- Gold -->
+              <div class="material-item">
+                <div class="material-info">
+                  <span class="material-name">
+                    <span class="material-dot dot-gold"></span>
+                    Gold (Au)
+                  </span>
+                  <span class="material-value" id="valGold">0.340 g</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill fill-gold" id="barGold" style="width: 45%;"></div>
+                </div>
+              </div>
+
+              <!-- Silver -->
+              <div class="material-item">
+                <div class="material-info">
+                  <span class="material-name">
+                    <span class="material-dot dot-silver"></span>
+                    Silver (Ag)
+                  </span>
+                  <span class="material-value" id="valSilver">3.50 g</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill fill-silver" id="barSilver" style="width: 60%;"></div>
+                </div>
+              </div>
+
+              <!-- Copper -->
+              <div class="material-item">
+                <div class="material-info">
+                  <span class="material-name">
+                    <span class="material-dot dot-copper"></span>
+                    Copper (Cu)
+                  </span>
+                  <span class="material-value" id="valCopper">150 g</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill fill-copper" id="barCopper" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <!-- Aluminum -->
+              <div class="material-item">
+                <div class="material-info">
+                  <span class="material-name">
+                    <span class="material-dot dot-aluminum"></span>
+                    Aluminum (Al)
+                  </span>
+                  <span class="material-value" id="valAluminum">250 g</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill fill-aluminum" id="barAluminum" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="value-summary-box">
+              <div>
+                <div class="value-label">Estimated Market Value</div>
+                <div style="font-size: 0.75rem; color: #64748b;">Based on current metal rates</div>
+              </div>
+              <div class="value-amount" id="totalValue">₹7,850</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recoverable Materials Section -->
+  <section class="materials-section" id="materials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Key Metals</div>
+        <h2 class="section-title">Recoverable Materials</h2>
+        <p class="section-subtitle">Electronics contain rich concentrations of essential elements that can be extracted
+          and reused indefinitely.</p>
+      </div>
+
+      <div class="materials-grid">
+        <!-- Gold -->
+        <div class="mat-card">
+          <div class="mat-icon-wrapper mat-gold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+          </div>
+          <h3 class="mat-title">Gold</h3>
+          <p class="mat-desc">Used in circuit boards and connectors due to exceptional conductivity and resistance to
+            oxidation.</p>
+        </div>
+
+        <!-- Silver -->
+        <div class="mat-card">
+          <div class="mat-icon-wrapper mat-silver">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <h3 class="mat-title">Silver</h3>
+          <p class="mat-desc">Excellent electrical conductor found in switches, solder joints, and printed electronics
+            assemblies.</p>
+        </div>
+
+        <!-- Copper -->
+        <div class="mat-card">
+          <div class="mat-icon-wrapper mat-copper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 12h12" />
+              <path d="M12 6v12" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+          </div>
+          <h3 class="mat-title">Copper</h3>
+          <p class="mat-desc">Found in wiring and internal components, providing power distribution and signal
+            transport.</p>
+        </div>
+
+        <!-- Aluminum -->
+        <div class="mat-card">
+          <div class="mat-icon-wrapper mat-aluminum">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" />
+              <path d="M3 9h18" />
+              <path d="M9 21V9" />
+            </svg>
+          </div>
+          <h3 class="mat-title">Aluminum</h3>
+          <p class="mat-desc">Common in device frames and cooling systems, providing structural rigidity and thermal
+            management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why E-Waste Matters Section -->
+  <section class="why-matters" id="why-matters">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-image-card">
+          <img src="assets/circular-economy.png" alt="Why E-Waste Recycling Matters Circular Economy Graphic">
+        </div>
+
+        <div class="why-content">
+          <div class="section-badge">Environmental Impact</div>
+          <h2 class="section-title">Why E-Waste Recycling Matters</h2>
+          <p class="section-subtitle">Responsible recycling reduces pollution, conserves natural resources, and recovers
+            high-value precious metals.</p>
+
+          <div class="why-content-list">
+            <div class="why-item">
+              <div class="why-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="why-item-title">Reduces Toxic Pollution</h3>
+                <p class="why-item-desc">Prevents hazardous materials like lead, mercury, and cadmium from contaminating
+                  soil and local water systems.</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="why-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="why-item-title">Conserves Natural Resources</h3>
+                <p class="why-item-desc">Recycling electronics reduces virgin mining demand and conserves energy
+                  required to extract raw ores.</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="why-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="why-item-title">Recovers Precious Metals</h3>
+                <p class="why-item-desc">Urban mining from e-waste yields up to 50 times higher concentration of gold
+                  than traditional mining ore.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action Banner -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-title">Ready to Discover the Worth of Your Old Electronics?</h2>
+        <p class="cta-text">Calculate your recoverable material yield and take the first step towards responsible
+          e-waste disposal.</p>
+        <a href="#calculator" class="btn btn-accent" id="ctaStartCalcBtn">
+          <span>Start Calculating</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+              </svg>
+            </div>
+            <div class="logo-text" style="color: white;">E-<span>Worth</span></div>
+          </a>
+          <p class="footer-brand-text">
+            Promoting sustainable e-waste awareness, metal recovery estimations, and environmental responsibility across
+            technology lifecycle management.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#calculator" class="footer-link">Calculator</a></li>
+            <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+            <li><a href="#materials" class="footer-link">Materials</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">About & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#why-matters" class="footer-link">About E-Worth</a></li>
+            <li><a href="#" class="footer-link"
+                onclick="alert('Privacy Policy: E-Worth respects user privacy. No personal device data is collected or stored during estimation.'); return false;">Privacy
+                Policy</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact Info</h4>
+          <ul class="footer-links">
+            <li class="footer-link">Email: contact@eworth.eco</li>
+            <li class="footer-link">Location: Sustainable Tech Hub</li>
+            <li class="footer-link">Status: Live Demo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 E-Worth. All rights reserved.</div>
+        <div class="footer-note">Designed for educational awareness of responsible e-waste recycling.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
